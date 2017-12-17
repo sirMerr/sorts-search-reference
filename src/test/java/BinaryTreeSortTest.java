@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedHashSet;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 
 @RunWith(Parameterized.class)
@@ -25,7 +26,7 @@ public class BinaryTreeSortTest {
     @Parameterized.Parameters(name = "{index} plan[{0} -> {1}]")
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {
-                {new LinkedHashSet<>(Arrays.asList(3,7,40,33,5,2,-6,7,32,42,10)), "-6,2,3,5,7,10,32,33,40,42"}
+                {new LinkedHashSet<>(Arrays.asList(3,7,40,33,5,2,-6,7,32,42,10)), "-6,2,3,5,7,10,32,33,40,42,"}
         });
     }
 
@@ -35,6 +36,6 @@ public class BinaryTreeSortTest {
         binaryTreeSort.sort();
         String result = binaryTreeSort.displayAsc(binaryTreeSort.root);
 
-        assertSame(expectedSortedAsc, result);
+        assertEquals(expectedSortedAsc, result);
     }
 }
