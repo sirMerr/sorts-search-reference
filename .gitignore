@@ -1,2 +1,3 @@
-*/log/logs.log
-*/.idea/workspace.xml
+log/logs.log
+.idea/workspace.xml
+.idea/vcs.xml
